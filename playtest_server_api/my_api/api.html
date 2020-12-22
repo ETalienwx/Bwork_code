@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>拨测api</title>
+</head>
+
+<style>
+    .tabtop13 {
+	    margin-top: 13px;
+    }
+    .tabtop13 td{
+        background-color:#ffffff;
+        height:25px;
+        line-height:150%;
+    }
+    .font-center{ text-align:center}
+    .btbg{background:#e9faff !important;}
+    .btbg1{background:#f2fbfe !important;}
+    .btbg2{background:#f3f3f3 !important;}
+    .btbg3{background:#ffffff !important;}
+    .biaoti{
+        font-family: 微软雅黑;
+        font-size: 26px;
+        font-weight: bold;
+        border-bottom:1px dashed #CCCCCC;
+        color: #255e95;
+    }
+    .titfont {
+        font-family: 微软雅黑;
+        font-size: 16px;
+        font-weight: bold;
+        color: #255e95;
+        background: url(../images/ico3.gif) no-repeat 15px center;
+        background-color:#e9faff;
+    }
+    .tabtxt2 {
+        font-family: 微软雅黑;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: right;
+        padding-right: 10px;
+        color:#327cd1;
+    }
+    .tabtxt3 {
+        font-family: 微软雅黑;
+        font-size: 15px;
+        padding-left: 15px;
+        color: #000;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        line-height: 20px;
+    }
+</style>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center">
+    <tr>
+        <td align="center" class="biaoti" height="60">拨测api文档</td>
+    </tr>
+    <tr>
+        <td align="right" height="25">🙈&nbsp;wangxuan(๑•̀ㅂ•́)و✧</td>
+    </tr>
+</table>
+
+<table width="100%" border="0" cellspacing="1" cellpadding="4" bgcolor="#cccccc" class="tabtop13" align="center">
+    <tr>
+        <td width="5%"  class="btbg font-center titfont" rowspan="2">接口</td>
+        <td width="3%" class="btbg font-center titfont" rowspan="2">方法</td>
+        <td width="10%" class="btbg font-center titfont" rowspan="2">作用</td>
+        <td width="15%" class="btbg font-center titfont" rowspan="2">备注（参数）</td>
+        <td width="15%" class="btbg font-center titfont" rowspan="2">返回值</td>
+    <tr></tr>
+    <tr>
+        <td width="7%" class="btbg1 font-center">/</td>
+        <td width="7%"  class="btbg2 font-center">get</td>
+        <td class="btbg2 font-center">&nbsp;查看拨测api文档</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="7%" class="btbg1 font-center"><a href='http://127.0.0.1:8765/health'>/health</a></td>
+        <td width="7%"  class="btbg3 font-center">get</td>
+        <td class="btbg3 font-center">&nbsp;查看服务是否alive</td>
+        <td class="btbg3 font-center">&nbsp;</td>
+        <td class="btbg3 font-center">
+            <code>
+                {
+                    "version": "1.0.0",
+                    "status": "alive"
+                }
+            </code>
+        </td>
+    </tr>
+    </tr>
+    <tr>
+        <td width="7%" class="btbg1 font-center"><a href='http://127.0.0.1:8765/createtask'>/createtask</a></td>
+        <td width="7%"  class="btbg2 font-center">get</td>
+        <td class="btbg2 font-center">&nbsp;显示创建任务界面</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+    </tr>
+    <tr>
+    <td width="7%" class="btbg1 font-center">/createtask</td>
+    <td width="7%"  class="btbg3 font-center">post</td>
+    <td class="btbg3 font-center">&nbsp;创建任务</td>
+    <td class="btbg3 font-center">
+              采用form数据格式&nbsp;
+             {
+                "ip": "183.146.25.70",
+                "port": "1935"
+             }
+    </td>
+    <td class="btbg3 font-center">
+        <code>
+                {
+                    "id": "srt",
+                    "name": "str",
+                    "type": "srt",
+                    "cycle": "srt",
+                    "detail": {
+                        "ip_ports": [
+                            "183.146.25.70:1935"
+                            ]
+                    }
+                }
+        </code>
+    </td>
+    <tr>
+        <td width="7%" class="btbg1 font-center"><a href='http://127.0.0.1:8765/createtasks'>/createtasks</a></td>
+        <td width="7%"  class="btbg2 font-center">get</td>
+        <td class="btbg2 font-center">&nbsp;显示创建任务页面</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="7%" class="btbg1 font-center">/createtasks</td>
+        <td width="7%"  class="btbg3 font-center">post</td>
+        <td class="btbg3 font-center">&nbsp;创建任务</td>
+        <td class="btbg3 font-center">&nbsp;["127.0.0.1:1935","127.0.0.1:1935"]</td>
+        <td class="btbg3 font-center">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="7%" class="btbg1 font-center"><a href='http://127.0.0.1:8765/tasks'>/tasks</a></td>
+        <td width="7%"  class="btbg2 font-center">get</td>
+        <td class="btbg2 font-center">&nbsp;获取所有的task</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+        <td class="btbg2 font-center">&nbsp;
+            <code>
+                {
+                    "id": "5f1a672c986f8f1926e4f170",
+                    "creat_time": "2020-07-24 11:45:39"
+                }
+            </code>
+        </td>
+    </tr>
+    <tr>
+        <td width="7%" class="btbg1 font-center"><a href='http://127.0.0.1:8765/getresult'>/getresult</a></td>
+        <td width="7%"  class="btbg3 font-center">get</td>
+        <td class="btbg3 font-center">&nbsp;显示查询任务结果界面</td>
+        <td class="btbg3 font-center">&nbsp;</td>
+        <td class="btbg3 font-center">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="7%" class="btbg1 font-center">/getresult</td>
+        <td width="7%"  class="btbg2 font-center">post</td>
+        <td class="btbg2 font-center">&nbsp;查询任务结果</td>
+        <td class="btbg2 font-center">
+                 采用form数据格式&nbsp;
+                {
+                    "task_id": "5f1a4f351d8a7b923bf687f0"
+                }
+        </td>
+        <td class="btbg2 font-center">
+            <code>
+            {
+                "required_bitrate": 4.09,
+                "description": "高清 1080P+",
+                "ping_ts": 1594230498,
+                "download_speed": 135.97,
+                "download_ts": 1594230498,
+                "city": null,
+                "task_id": "5f06069cccf0ed0f6970cdc0",
+                "id": "5f0606e5ccf0ed0f6970cdc1"
+            }
+            </code>
+        </td>
+    </tr>
+
+    <tr>
+        <td width="7%" class="btbg1 font-center">/getresult/{task_id}</td>
+        <td width="7%"  class="btbg3 font-center">get</td>
+        <td class="btbg3 font-center">&nbsp;获取当前task_id的任务结果</td>
+        <td class="btbg3 font-center">&nbsp;</td>
+        <td class="btbg3 font-center">&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td width="7%" class="btbg1 font-center"><a href='http://127.0.0.1:8765/getstatus'>/getstatus</a></td>
+        <td width="7%"  class="btbg2 font-center">get</td>
+        <td class="btbg2 font-center">&nbsp;显示查询状态页面</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td width="7%" class="btbg1 font-center">/getstatus</td>
+        <td width="7%"  class="btbg3 font-center">post</td>
+        <td class="btbg3 font-center">&nbsp;查询任务状态</td>
+        <td class="btbg3 font-center">
+                 采用form数据格式&nbsp;
+                {
+                    "task_id": "5f1a4f351d8a7b923bf687f0"
+                }
+        </td>
+        <td class="btbg3 font-center">
+            <code>
+                {
+                    "task_id": "5f1a4f351d8a7b923bf687f0",
+                    "status": "finish"
+                }
+            </code>
+        </td>
+    </tr>
+
+    <tr>
+        <td width="7%" class="btbg1 font-center">/getstatus/{task_id}</td>
+        <td width="7%"  class="btbg2 font-center">get</td>
+        <td class="btbg2 font-center">&nbsp;获取当前task_id的任务状态</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+    </tr>
+
+    <tr>
+        <td width="7%" class="btbg1 font-center"><a href='http://127.0.0.1:8765/stop'>/stop</a></td>
+        <td width="7%"  class="btbg3 font-center">get</td>
+        <td class="btbg3 font-center">&nbsp;显示停止任务界面</td>
+        <td class="btbg3 font-center">&nbsp;</td>
+        <td class="btbg3 font-center">&nbsp;</td>
+    </tr>
+        </tr>
+        <tr>
+        <td width="7%" class="btbg1 font-center">/stop</td>
+        <td width="7%"  class="btbg2 font-center">post</td>
+        <td class="btbg2 font-center">&nbsp;停止任务</td>
+        <td class="btbg2 font-center">
+                 采用form数据格式&nbsp;
+                {
+                    "task_id": "5f1a4f351d8a7b923bf687f0"
+                }
+        </td>
+        <td class="btbg2 font-center">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="7%" class="btbg1 font-center"></td>
+        <td width="7%"  class="btbg3 font-center"></td>
+        <td class="btbg3 font-center">&nbsp;</td>
+        <td class="btbg3 font-center">&nbsp;</td>
+        <td class="btbg3 font-center">&nbsp;</td>
+    </tr>
+        </tr>
+        <tr>
+        <td width="7%" class="btbg1 font-center"></td>
+        <td width="7%"  class="btbg2 font-center"></td>
+        <td class="btbg2 font-center">&nbsp;</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+        <td class="btbg2 font-center">&nbsp;</td>
+    </tr>
+    <tr>
+        <td width="7%" class="btbg1 font-center"></td>
+        <td width="7%"  class="btbg3 font-center"></td>
+        <td class="btbg3 font-center">&nbsp;</td>
+        <td class="btbg3 font-center">&nbsp;</td>
+        <td class="btbg3 font-center">&nbsp;</td>
+    </tr>
+</table>
+</body>
+
+</html>
